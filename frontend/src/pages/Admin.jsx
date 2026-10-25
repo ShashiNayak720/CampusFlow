@@ -35,11 +35,11 @@ function Admin() {
         await Promise.all([
 
           fetch(
-            'http://localhost:5000/api/events'
+            `${import.meta.env.VITE_API_URL}/api/events`
           ),
 
           fetch(
-            'http://localhost:5000/api/registrations'
+            `${import.meta.env.VITE_API_URL}/api/registrations`
           )
 
         ])
@@ -122,8 +122,8 @@ function Admin() {
 
 
       const url = editingId
-        ? `http://localhost:5000/api/events/${editingId}`
-        : 'http://localhost:5000/api/events'
+        ? `${import.meta.env.VITE_API_URL}/api/events/${editingId}`
+        : `${import.meta.env.VITE_API_URL}/api/events`
 
 
       const method = editingId
@@ -226,7 +226,7 @@ function Admin() {
     try {
 
       const response = await fetch(
-        `http://localhost:5000/api/events/${eventId}`,
+        `${import.meta.env.VITE_API_URL}/api/events/${eventId}`,
         {
           method: 'DELETE'
         }

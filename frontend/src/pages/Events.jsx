@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import EventCard from '../components/EventCard'
 
 function Events() {
-
   const [events, setEvents] = useState([])
   const [search, setSearch] = useState('')
   const [category, setCategory] = useState('All')
@@ -13,7 +12,7 @@ function Events() {
     const fetchEvents = async () => {
       try {
         const response = await fetch(
-          'http://localhost:5000/api/events'
+          `${import.meta.env.VITE_API_URL}/api/events`
         )
 
         if (!response.ok) {

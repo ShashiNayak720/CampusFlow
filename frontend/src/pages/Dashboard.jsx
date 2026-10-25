@@ -19,7 +19,7 @@ function Dashboard() {
       try {
 
         const response = await fetch(
-          'http://localhost:5000/api/registrations'
+          `${import.meta.env.VITE_API_URL}/api/registrations`
         )
 
         if (!response.ok) {
@@ -68,7 +68,7 @@ function Dashboard() {
   try {
 
     const response = await fetch(
-      `http://localhost:5000/api/registrations/${registrationId}`,
+      `${import.meta.env.VITE_API_URL}/api/registrations/${registrationId}`,
       {
         method: 'DELETE'
       }

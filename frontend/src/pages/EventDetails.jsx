@@ -16,7 +16,7 @@ function EventDetails() {
       try {
 
         const response = await fetch(
-          `http://localhost:5000/api/events/${id}`
+          `${import.meta.env.VITE_API_URL}/api/events`
         )
 
         if (!response.ok) {

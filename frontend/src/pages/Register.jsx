@@ -69,7 +69,7 @@ function Register() {
 
       // STEP 1: Create/find student
       const studentResponse = await fetch(
-        'http://localhost:5000/api/students',
+        `${import.meta.env.VITE_API_URL}/api/students`,
         {
           method: 'POST',
 
@@ -101,7 +101,7 @@ function Register() {
 
       // STEP 2: Register student for event
       const registrationResponse = await fetch(
-        'http://localhost:5000/api/registrations',
+        `${import.meta.env.VITE_API_URL}/api/registrations`,
         {
           method: 'POST',
 
