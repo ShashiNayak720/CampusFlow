@@ -16,7 +16,7 @@ function EventDetails() {
       try {
 
         const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/api/events`
+          `${import.meta.env.VITE_API_URL}/api/events/${id}`
         )
 
         if (!response.ok) {
@@ -132,7 +132,6 @@ function EventDetails() {
                   <div className="row g-4">
 
                     <div className="col-md-6">
-
                       <div className="text-secondary">
                         📅 Date
                       </div>
@@ -140,12 +139,10 @@ function EventDetails() {
                       <strong>
                         {event.date}
                       </strong>
-
                     </div>
 
 
                     <div className="col-md-6">
-
                       <div className="text-secondary">
                         🕐 Time
                       </div>
@@ -153,12 +150,10 @@ function EventDetails() {
                       <strong>
                         {event.time}
                       </strong>
-
                     </div>
 
 
                     <div className="col-md-6">
-
                       <div className="text-secondary">
                         📍 Venue
                       </div>
@@ -166,12 +161,10 @@ function EventDetails() {
                       <strong>
                         {event.venue}
                       </strong>
-
                     </div>
 
 
                     <div className="col-md-6">
-
                       <div className="text-secondary">
                         👤 Organizer
                       </div>
@@ -179,47 +172,47 @@ function EventDetails() {
                       <strong>
                         {event.organizer}
                       </strong>
-
                     </div>
 
 
                     <div className="col-md-6">
 
-  <div className="text-secondary">
-    👥 Seats Available
-  </div>
+                      <div className="text-secondary">
+                        👥 Seats Available
+                      </div>
 
-  <strong>
-    {event.availableSeats} / {event.capacity}
-  </strong>
+                      <strong>
+                        {event.availableSeats} / {event.capacity}
+                      </strong>
 
-</div>
+                    </div>
+
                   </div>
 
 
                   <div className="mt-5">
 
-  {event.availableSeats > 0 ? (
+                    {event.availableSeats > 0 ? (
 
-    <Link
-      to={`/events/${event._id}/register`}
-      className="btn btn-primary btn-lg"
-    >
-      Register for Event
-    </Link>
+                      <Link
+                        to={`/events/${event._id}/register`}
+                        className="btn btn-primary btn-lg"
+                      >
+                        Register for Event
+                      </Link>
 
-  ) : (
+                    ) : (
 
-    <button
-      className="btn btn-secondary btn-lg"
-      disabled
-    >
-      Event Full
-    </button>
+                      <button
+                        className="btn btn-secondary btn-lg"
+                        disabled
+                      >
+                        Event Full
+                      </button>
 
-  )}
+                    )}
 
-</div>
+                  </div>
 
                 </div>
 
