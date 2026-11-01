@@ -581,3 +581,225 @@ a {
   }
 
 }
+/* ============================= */
+/* Previous Event Highlights */
+/* ============================= */
+
+.past-event-section {
+  margin-top: 60px;
+}
+
+.past-event-heading {
+  margin-bottom: 28px;
+}
+
+.past-event-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #6366f1;
+  margin-bottom: 8px;
+}
+
+.past-event-heading h2 {
+  font-size: 30px;
+  font-weight: 750;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.past-event-heading p {
+  color: #6b7280;
+  max-width: 650px;
+  margin-bottom: 0;
+}
+
+/* Archive card */
+
+.archive-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 20px;
+  height: 100%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.archive-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.archive-card-header h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.archive-card-header span {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.archive-badge {
+  background: #eef2ff;
+  color: #4f46e5 !important;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 11px !important;
+  font-weight: 700;
+}
+
+/* Gallery */
+
+.archive-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.archive-photo {
+  height: 190px;
+  overflow: hidden;
+  border-radius: 13px;
+  background: #f3f4f6;
+}
+
+.archive-photo:only-child {
+  grid-column: span 2;
+}
+
+.archive-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.archive-photo:hover img {
+  transform: scale(1.05);
+}
+
+/* Winner card */
+
+.winner-card {
+  height: 100%;
+  padding: 30px;
+  border-radius: 18px;
+  background: linear-gradient(
+    145deg,
+    #111827,
+    #1f2937
+  );
+  color: white;
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.18);
+}
+
+.winner-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.winner-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #a5b4fc;
+}
+
+.winner-card h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 25px;
+  font-weight: 750;
+}
+
+.winner-achievement {
+  color: #c7d2fe;
+  margin-bottom: 20px;
+}
+
+.winner-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 20px 0;
+}
+
+.participant-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.participant-info span {
+  color: #9ca3af;
+}
+
+.participant-info strong {
+  color: white;
+}
+
+.winner-description {
+  color: #d1d5db;
+  line-height: 1.7;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+/* Note */
+
+.archive-note {
+  margin-top: 18px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.archive-note p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .past-event-heading h2 {
+    font-size: 25px;
+  }
+
+  .archive-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-photo,
+  .archive-photo:only-child {
+    grid-column: span 1;
+    height: 210px;
+  }
+
+  .archive-card-header {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .winner-card {
+    padding: 24px;
+  }
+}
